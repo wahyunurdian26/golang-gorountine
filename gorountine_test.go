@@ -10,18 +10,18 @@ func RunHelloWorld() {
 	fmt.Println("HELLO WORLD")
 }
 
-func TestCreateGorountine(t *testing.T)  {
+func TestCreateGorountine(t *testing.T) {
 	go RunHelloWorld()
 	fmt.Println("Ups")
 
 	time.Sleep(1 * time.Second)
 }
 
-func DisplayNumber(number int)  {
+func DisplayNumber(number int) {
 	fmt.Println("Display", number)
 }
 
-func TestManyGorountine(t *testing.T)  {
+func TestManyGorountine(t *testing.T) {
 	for i := 0; i < 100000; i++ {
 		go DisplayNumber(i)
 	}
